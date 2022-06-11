@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/chicho-react-challenge/static/js/main.f44528e9.js",
+    "main.js": "/chicho-react-challenge/static/js/main.c604936a.js",
     "static/js/787.1c4caa44.chunk.js": "/chicho-react-challenge/static/js/787.1c4caa44.chunk.js",
     "index.html": "/chicho-react-challenge/index.html",
-    "main.f44528e9.js.map": "/chicho-react-challenge/static/js/main.f44528e9.js.map",
+    "main.c604936a.js.map": "/chicho-react-challenge/static/js/main.c604936a.js.map",
     "787.1c4caa44.chunk.js.map": "/chicho-react-challenge/static/js/787.1c4caa44.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.f44528e9.js"
+    "static/js/main.c604936a.js"
   ]
 }
