@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { useFlasher } from '../utils/hooks'
 
 const FourthChallenge = () => {
@@ -7,6 +7,7 @@ const FourthChallenge = () => {
 
   return (
     <>
+      <h1>Evitar renderizados innecesarios</h1>
       <input onChange={e => setName(e.target.value)} placeholder='Name' value={name} />
       <NameDisplay name={name} />
       <hr />
@@ -16,24 +17,26 @@ const FourthChallenge = () => {
   )
 }
 
-const AgeDisplay = ({ length }) => {
+const AgeDisplay = React.memo(({ length }) => {
   const myRef = useFlasher()
+  console.log('Renderizando AgeDisplay')
 
   return (
     <div ref={myRef}>
       <p>Age: {length}</p>
     </div>
   )
-}
+})
 
-const NameDisplay = ({ name }) =>  {
+const NameDisplay = React.memo(({ name }) =>  {
   const myRef = useFlasher()
+  console.log('Renderizando NameDisplay')
 
   return (
     <div ref={myRef}>
       <p>Your name is: {name}</p>
     </div>
   )
-}
+})
 
 export default FourthChallenge

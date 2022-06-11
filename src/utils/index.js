@@ -1,3 +1,22 @@
+export const ROUTES = [
+  {
+    label: 'FIRST',
+    path : '/first'
+  },
+  {
+    label: 'SECOND',
+    path : '/second'
+  },
+  {
+    label: 'THIRD',
+    path : '/third'
+  },
+  {
+    label: 'FOURTH',
+    path : '/fourth'
+  }
+]
+
 export const USERS = [
   {
     age      : 27,
@@ -47,6 +66,14 @@ export const getGifts = () => {
   const gifts = 'bici coche pelota _playstation bici _coche peluche coche bici'
 
   // your code here
+  const filter = gifts
+    .split(' ')
+    .filter(gift => !gift.startsWith('_'))
+    .reduce(function(prev, cur) {
+      prev[cur] = (prev[cur] || 0) + 1
 
-  return gifts
+      return prev
+    }, {})
+
+  return filter
 }

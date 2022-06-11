@@ -6,19 +6,25 @@
     "@emotion/react": "11.7.1",
     "@emotion/styled": "11.6.0",
     "@mui/material": "5.2.6",
+    "@reduxjs/toolkit": "1.8.2",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "eslint-plugin-sort-keys-fix": "1.1.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-redux": "8.0.2",
+    "react-router": "6.3.0",
+    "react-router-dom": "6.3.0",
     "react-scripts": "5.0.0",
+    "redux": "4.2.0",
+    "redux-thunk": "2.4.1",
     "web-vitals": "^2.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -40,5 +46,10 @@
     ]
   },
   "keywords": [],
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@babel/preset-env": "7.18.2",
+    "babel-jest": "28.1.1",
+    "jest": "27.4.5"
+  }
 }
