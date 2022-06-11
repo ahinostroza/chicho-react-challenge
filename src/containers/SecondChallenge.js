@@ -2,15 +2,14 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { TextField, FormControl, InputLabel, Select, MenuItem, Button, Table, TableRow, TableContainer, Paper, TableHead, TableCell, TableBody } from '@mui/material'
 
-import { ordenarUsuarioAction, eliminarUsuarioAction } from '../store/actions/user'
+import { actualizarUsuarioAction } from '../store/actions/user'
 
 const SecondChallenge = () => {
   const users = useSelector(state => state.user.users)
   const [ term, setTerm ] = React.useState('')
 
   const dispatch = useDispatch()
-  const ordenarUsuario = list => dispatch(ordenarUsuarioAction(list))
-  const eliminarUsuario = list => dispatch(eliminarUsuarioAction(list))
+  const actualizarUsuario = list => dispatch(actualizarUsuarioAction(list))
 
   const searchByFirstname = (value) => {
     setTerm(value)
@@ -25,14 +24,14 @@ const SecondChallenge = () => {
 
       return 0
     })
-    ordenarUsuario(sorted)
+    actualizarUsuario(sorted)
   }
 
   const deleteUser = (id) => {
     let list = [ ...users ]
     const index = list.findIndex(x => x.id === id)
     list.splice(index, 1)
-    eliminarUsuario(list)
+    actualizarUsuario(list)
   }
 
   return (
@@ -73,7 +72,7 @@ const SecondChallenge = () => {
                 <TableRow key={idx}>
                   <TableCell>{item.id}</TableCell>
                   <TableCell>
-                    <img src={item.avatar} />
+                    <img alt='avatar' src={item.avatar} />
                   </TableCell>
                   <TableCell>{item.firstName}</TableCell>
                   <TableCell>{item.lastName}</TableCell>

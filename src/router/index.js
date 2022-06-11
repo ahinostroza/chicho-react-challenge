@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import App from '../App'
 import FirstChallenge from '../containers/FirstChallenge'
 import SecondChallenge from '../containers/SecondChallenge'
@@ -16,7 +16,8 @@ const Router = () => (
       <Route element={<SecondChallenge />} path='/second' />
       <Route element={<ThirdChallenge />} path='/third' />
       <Route element={<FourthChallenge />} path='/fourth' />
-      <Route element={<NotFound />} path='*' />
+      <Route element={<NotFound />} path='/not-found' />
+      <Route element={<Navigate to='/not-found' />} path='*' />
     </Route>
   </Routes>
 )

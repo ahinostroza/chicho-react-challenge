@@ -1,23 +1,12 @@
-import { ORDENAR_USUARIO, ELIMINAR_USUARIO } from '../types/user'
+import { ACTUALIZAR_USUARIO } from '../types/user'
 
-export function ordenarUsuarioAction(list) {
+export function actualizarUsuarioAction(list) {
   return (dispatch) => {
-    dispatch(ordenarUsuario(list))
+    dispatch(actualizarUsuario(list))
   }
 }
 
-export function eliminarUsuarioAction(list) {
-  return (dispatch) => {
-    dispatch(eliminarUsuario(list))
-  }
-}
-
-const ordenarUsuario = (list) => ({
+const actualizarUsuario = (list) => ({
   payload: list,
-  type   : ORDENAR_USUARIO
-})
-
-const eliminarUsuario = (list) => ({
-  payload: list,
-  type   : ELIMINAR_USUARIO
+  type   : ACTUALIZAR_USUARIO
 })
